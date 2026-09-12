@@ -55,15 +55,15 @@ The project is developed using HTML, CSS, and JavaScript, with LocalStorage for 
 # Screenshots (Add at least 3)
 ![<img width="1807" height="907" alt="Screenshot 2026-09-12 085355" src="https://github.com/user-attachments/assets/461d7028-eb6d-488a-bd8e-201450835e36" />
 ](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+*Exploring the Uselessly Useful productivity app — discovering its dashboard, task tracking, habit monitoring, and Deep Work mode designed to improve focus and productivity.*
 
 ![<img width="1863" height="907" alt="Screenshot 2026-09-12 085409" src="https://github.com/user-attachments/assets/02ddf101-3a21-4a6d-b647-56a8e2491c8d" />
 ](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+*Exploring the Uselessly Useful productivity app — discovering its dashboard, task tracking, habit monitoring, and Deep Work mode designed to improve focus and productivity.*
 
 ![<img width="1835" height="795" alt="Screenshot 2026-09-12 085453" src="https://github.com/user-attachments/assets/587973c2-d9e6-43c9-9775-a686246c76e6" />
 ](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+*Exploring the Task Manager feature of the Uselessly Useful app, where users can add, search, organize, and track tasks to stay productive and get things done.*
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
@@ -97,8 +97,8 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [chandrim]: [Frontend & UI: Designed the user interface, created the HTML/CSS structure, responsive layout, animations, dashboard, and navigation.]
-- [athul]: [Functionality & Testing: Developed JavaScript features such as tasks, habits, focus timer, XP, achievements, LocalStorage, PWA functionality, and performed testing/debugging.]
+- [chandrim basu]: [Frontend & UI: Designed the user interface, created the HTML/CSS structure, responsive layout, animations, dashboard, and navigation.]
+- [athul pr]: [Functionality & Testing: Developed JavaScript features such as tasks, habits, focus timer, XP, achievements, LocalStorage, PWA functionality, and performed testing/debugging.]
 
 
 ---
