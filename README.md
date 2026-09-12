@@ -41,22 +41,28 @@ For Hardware:
 ### Implementation
 For Software:using html,css and javascript
 # Installation
-[install vs co]
+[1.install vs code and the live server extension
+2.open the project folder in vs code and open index.html
+3.right click index.html->open with live server to run the application in a web browser]
 
 # Run
-[commands]
+[the app will automatically open in browser and be ready to use]
 
 ### Project Documentation
-For Software:
+For Software:Uselessly Useful is a productivity web application designed to solve everyday problems like poor task management, lack of focus, and inconsistent habits. It combines tasks, focus timer, habits, notes, challenges, achievements, and statistics in one platform.
+The project is developed using HTML, CSS, and JavaScript, with LocalStorage for data storage and PWA technology for offline support. It provides a simple, responsive, and user-friendly interface for both desktop and mobile devices.
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
+![<img width="1807" height="907" alt="Screenshot 2026-09-12 085355" src="https://github.com/user-attachments/assets/461d7028-eb6d-488a-bd8e-201450835e36" />
+](Add screenshot 1 here with proper name)
 *Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
+![<img width="1863" height="907" alt="Screenshot 2026-09-12 085409" src="https://github.com/user-attachments/assets/02ddf101-3a21-4a6d-b647-56a8e2491c8d" />
+](Add screenshot 2 here with proper name)
 *Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
+![<img width="1835" height="795" alt="Screenshot 2026-09-12 085453" src="https://github.com/user-attachments/assets/587973c2-d9e6-43c9-9775-a686246c76e6" />
+](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
 
 # Diagrams
@@ -84,16 +90,16 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+[https://drive.google.com/drive/folders/1FchP4rb5j5TkjutlWQmZmg8xuq7qkcpw?usp=drive_link]
 *Explain what the video demonstrates*
 
 # Additional Demos
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [chandrim]: [Frontend & UI: Designed the user interface, created the HTML/CSS structure, responsive layout, animations, dashboard, and navigation.]
+- [athul]: [Functionality & Testing: Developed JavaScript features such as tasks, habits, focus timer, XP, achievements, LocalStorage, PWA functionality, and performed testing/debugging.]
+
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
