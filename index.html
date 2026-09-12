@@ -1,1 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="theme-color" content="#080b18">
 
+  <title>Uselessly Useful</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">✦</div>
+    <div>
+      <b>Uselessly Useful</b>
+      <small>Do something useful today.</small>
+    </div>
+  </div>
+
+  <nav>
+    <button data-view="dashboard">Dashboard</button>
+    <button data-view="focus">Focus</button>
+    <button data-view="tasks">Tasks</button>
+    <button data-view="habits">Habits</button>
+    <button data-view="challenges">Challenges</button>
+    <button data-view="stats">Statistics</button>
+    <button data-view="achievements">Achievements</button>
+  </nav>
+
+  <div class="top-actions">
+    <button id="themeBtn">☀</button>
+    <button id="notifyBtn">🔔</button>
+    <button id="settingsBtn">⚙</button>
+  </div>
+</header>
+
+
+<main>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="view active">
+
+  <div class="hero">
+    <div>
+      <span class="eyebrow">YOUR PERSONAL PRODUCTIVITY HUB</span>
+      <h1>Make today<br><span>count.</span></h1>
+      <p>Track tasks, habits, focus sessions and random useful things.</p>
+    </div>
+
+    <div class="clock-card">
+      <strong id="clock">00:00:00</strong>
+      <span id="date">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <span>LEVEL</span>
+      <strong id="level">1</strong>
+      <small id="levelXP">0 XP</small>
+    </div>
+
+    <div class="stat-card">
+      <span>XP</span>
+      <strong id="xp">0</strong>
+      <small>Experience</small>
+    </div>
+
+    <div class="stat-card">
+      <span>STREAK</span>
+      <strong id="streak">0</strong>
+      <small>Days</small>
+    </div>
+
+    <div class="stat-card">
+      <span>TASKS</span>
+      <strong id="taskMetric">0</strong>
+      <small>Completed</small>
+    </div>
+
+  </div>
+
+
+  <div class="dashboard-grid">
+
+    <div class="card progress-card">
+      <div class="card-head">
+        <div>
+          <span class="eyebrow">TODAY</span>
+          <h2>Daily progress</h2>
+        </div>
+        <strong id="dailyPercent">0%</strong>
+      </div>
+
+      <div class="progress">
+        <div id="dailyProgress"></div>
+      </div>
+
+      <p id="dailyText">Complete tasks and habits to progress.</p>
+    </div>
+
+
+    <div class="card">
+      <span class="eyebrow">QUOTE</span>
+      <h2 id="quote">Loading...</h2>
+      <button class="secondary" id="newQuote">New quote</button>
+    </div>
+
+
+    <div class="card">
+      <span class="eyebrow">QUICK TASK</span>
+      <h2>Add something useful</h2>
+
+      <div class="input-row">
+        <input id="quickTask" placeholder="What needs to be done?">
+        <button id="quickAdd">+</button>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <span class="eyebrow">DECISION MACHINE</span>
+      <h2 id="decision">Need a decision?</h2>
+      <button class="primary" id="decideBtn">Decide for me</button>
+    </div>
+
+
+    <div class="card">
+      <span class="eyebrow">RANDOM NUMBER</span>
+      <h2 id="randomNumber">---</h2>
+
+      <div class="input-row">
+        <input id="minNumber" type="number" value="1">
+        <input id="maxNumber" type="number" value="100">
+        <button id="randomBtn">🎲</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOCUS -->
+<section id="focus" class="view">
+
+  <div class="section-title">
+    <span class="eyebrow">FOCUS CENTER</span>
+    <h1>Deep work mode</h1>
+    <p>Focus without distractions.</p>
+  </div>
+
+  <div class="focus-layout">
+
+    <div class="card focus-timer-card">
+
+      <div class="timer-ring">
+        <div>
+          <strong id="timer">25:00</strong>
+          <span id="timerStatus">READY</span>
+        </div>
+      </div>
+
+      <div class="preset-row">
+        <button class="preset" data-min="5">5m</button>
+        <button class="preset" data-min="15">15m</button>
+        <button class="preset active" data-min="25">25m</button>
+        <button class="preset" data-min="45">45m</button>
+      </div>
+
+      <div class="timer-buttons">
+        <button class="primary" id="startTimer">Start</button>
+        <button class="secondary" id="pauseTimer">Pause</button>
+        <button class="secondary" id="resetTimer">Reset</button>
+      </div>
+
+    </div>
+
+
+    <div class="card">
+      <span class="eyebrow">FOCUS STATS</span>
+
+      <div class="mini-stat">
+        <span>Sessions</span>
+        <strong id="focusSessions">0</strong>
+      </div>
+
+      <div class="mini-stat">
+        <span>Total minutes</span>
+        <strong id="focusMinutes">0</strong>
+      </div>
+
+      <div class="mini-stat">
+        <span>Best session</span>
+        <strong id="bestFocus">0 min</strong>
+      </div>
+
+      <div class="mini-stat">
+        <span>Focus XP</span>
+        <strong id="focusXP">0 XP</strong>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TASKS -->
+<section id="tasks" class="view">
+
+  <div class="section-title">
+    <span class="eyebrow">TASK MANAGER</span>
+    <h1>Get things done.</h1>
+  </div>
+
+  <div class="card">
+
+    <div class="task-input">
+
+      <input id="taskInput" placeholder="Add a task...">
+
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button class="primary" id="addTask">Add task</button>
+
+    </div>
+
+
+    <div class="task-tools">
+      <input id="taskSearch" placeholder="Search tasks...">
+
+      <select id="taskFilter">
+        <option value="all">All</option>
+        <option value="active">Active</option>
+        <option value="completed">Completed</option>
+        <option value="high">High priority</option>
+      </select>
+    </div>
+
+    <div class="task-progress">
+      <div>
+        <span id="taskProgressText">0 / 0</span>
+        <strong id="taskProgressPercent">0%</strong>
+      </div>
+
+      <div class="progress">
+        <div id="taskProgress"></div>
+      </div>
+    </div>
+
+    <div id="taskList"></div>
+
+  </div>
+
+</section>
+
+
+<!-- HABITS -->
+<section id="habits" class="view">
+
+  <div class="section-title">
+    <span class="eyebrow">HABIT TRACKER</span>
+    <h1>Build consistency.</h1>
+  </div>
+
+  <div class="card">
+
+    <div class="task-input">
+      <input id="habitInput" placeholder="Example: Read 10 pages">
+      <button class="primary" id="addHabit">Add habit</button>
+    </div>
+
+    <div id="habitList"></div>
+
+  </div>
+
+</section>
+
+
+<!-- CHALLENGES -->
+<section id="challenges" class="view">
+
+  <div class="section-title">
+    <span class="eyebrow">DAILY CHALLENGES</span>
+    <h1>Level up.</h1>
+  </div>
+
+  <div id="challengeGrid" class="challenge-grid"></div>
+
+</section>
+
+
+<!-- STATISTICS -->
+<section id="stats" class="view">
+
+  <div class="section-title">
+    <span class="eyebrow">STATISTICS</span>
+    <h1>Your progress.</h1>
+  </div>
+
+  <div class="stats-grid big-stats">
+
+    <div class="stat-card">
+      <span>TOTAL XP</span>
+      <strong id="sXP">0</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>TASKS</span>
+      <strong id="sTasks">0</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>FOCUS</span>
+      <strong id="sFocus">0m</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>HABITS</span>
+      <strong id="sHabits">0</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>CHALLENGES</span>
+      <strong id="sChallenges">0</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>BEST STREAK</span>
+      <strong id="sStreak">0</strong>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <span class="eyebrow">RECENT ACTIVITY</span>
+    <div id="activityList"></div>
+  </div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="view">
+
+  <div class="section-title">
+    <span class="eyebrow">ACHIEVEMENTS</span>
+    <h1>Unlock your badges.</h1>
+  </div>
+
+  <div id="achievementGrid" class="achievement-grid"></div>
+
+</section>
+
+
+<!-- NOTES -->
+<section class="card notes-card">
+
+  <div class="card-head">
+    <div>
+      <span class="eyebrow">QUICK NOTES</span>
+      <h2>Brain dump</h2>
+    </div>
+
+    <button class="secondary" id="saveNotes">Save</button>
+  </div>
+
+  <textarea id="notes" placeholder="Write anything here..."></textarea>
+
+</section>
+
+</main>
+
+
+<!-- SETTINGS MODAL -->
+<div id="settingsModal" class="modal">
+
+  <div class="modal-box">
+
+    <div class="modal-head">
+      <h2>Settings</h2>
+      <button id="closeSettings">×</button>
+    </div>
+
+    <label>
+      Daily goal
+      <input id="dailyGoal" type="number" min="1" max="100" value="5">
+    </label>
+
+    <label class="switch-row">
+      <span>Ambient animation</span>
+      <input id="animationToggle" type="checkbox" checked>
+    </label>
+
+    <label class="switch-row">
+      <span>Sound effects</span>
+      <input id="soundToggle" type="checkbox" checked>
+    </label>
+
+    <div class="settings-buttons">
+      <button id="exportBtn" class="secondary">Export data</button>
+
+      <label class="secondary file-label">
+        Import data
+        <input id="importFile" type="file" accept=".json">
+      </label>
+
+      <button id="resetBtn" class="danger">Reset everything</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div id="toast"></div>
+
+<footer>
+  <span>Uselessly Useful © 2026</span>
+  <span>Offline-first productivity app</span>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
